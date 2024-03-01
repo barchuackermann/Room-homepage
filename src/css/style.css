@@ -1,0 +1,370 @@
+/* Colors */
+.desktop {
+  display: none;
+}
+@media only screen and (min-width: 1440px) {
+  .desktop {
+    display: block;
+  }
+}
+
+.mobile {
+  display: block;
+}
+@media only screen and (min-width: 1440px) {
+  .mobile {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  position: relative;
+  background-color: transparent;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+}
+header nav.show {
+  background-color: white;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+}
+header nav.show .menu-toggler {
+  display: none;
+}
+header nav.show .menu-close {
+  display: block;
+}
+header nav.show .menu-brand {
+  display: none;
+}
+header nav.show .collapse-menu {
+  display: flex;
+  width: 100%;
+  margin-left: 7rem;
+}
+header nav.show .collapse-menu ul li a {
+  color: black;
+}
+@media only screen and (min-width: 1440px) {
+  header nav {
+    justify-content: flex-start;
+  }
+}
+header nav .menu-toggler {
+  background-color: transparent;
+  position: absolute;
+  top: 6vh;
+  left: 3rem;
+  border: none;
+}
+header nav .menu-close {
+  background-color: transparent;
+  position: absolute;
+  top: 6vh;
+  left: 3rem;
+  border: none;
+  display: none;
+}
+header nav .menu-brand {
+  margin: auto 6rem;
+}
+header nav .collapse-menu {
+  display: none;
+}
+header nav .collapse-menu ul {
+  display: flex;
+}
+header nav .collapse-menu ul li {
+  list-style: none;
+  margin-right: 1rem;
+}
+header nav .collapse-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  position: relative;
+}
+header nav .collapse-menu ul li a:hover:after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -8px;
+  left: 25%;
+}
+@media only screen and (min-width: 1440px) {
+  header nav .collapse-menu {
+    display: flex;
+  }
+}
+
+main {
+  height: auto;
+}
+@media only screen and (min-width: 1440px) {
+  main {
+    height: 80vh;
+  }
+}
+main .row {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1440px) {
+  main .row {
+    flex-direction: row;
+    height: 100%;
+  }
+}
+main .row .img-container {
+  width: 100%;
+}
+@media only screen and (min-width: 1440px) {
+  main .row .img-container {
+    width: 60vw;
+    height: 100%;
+  }
+}
+main .row .img-container .img-slide.img-1 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+main .row .img-container .img-slide.img-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+main .row .description-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (min-width: 1440px) {
+  main .row .description-container {
+    width: 40vw;
+  }
+}
+main .row .description-container .description-slide {
+  padding: 7vw;
+}
+main .row .description-container .description-slide h1 {
+  font-size: 3rem;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+@media only screen and (min-width: 1440px) {
+  main .row .description-container .description-slide h1 {
+    margin-top: 0;
+  }
+}
+main .row .description-container .description-slide p {
+  color: hsl(0, 0%, 63%);
+  width: auto;
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 1440px) {
+  main .row .description-container .description-slide p {
+    width: 90%;
+  }
+}
+main .row .description-container .description-slide button.btn-shop {
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+}
+main .row .description-container .description-slide button.btn-shop:hover {
+  color: hsl(0, 0%, 63%);
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+}
+main .row .description-container .description-slide button.btn-shop:hover svg {
+  fill: hsl(0, 0%, 63%);
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+}
+main .row .description-container .description-arrows {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  bottom: unset;
+  top: -8vh;
+}
+@media only screen and (min-width: 1440px) {
+  main .row .description-container .description-arrows {
+    justify-content: start;
+    bottom: 0;
+    left: 0;
+    top: unset;
+  }
+}
+main .row .description-container .description-arrows button.btn {
+  background-color: black;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  padding: 10px;
+  width: 8vh;
+  height: 8vh;
+  transition: all 0.15s ease-out;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  -ms-transition: all 0.15s ease-out;
+  -o-transition: all 0.15s ease-out;
+}
+@media only screen and (min-width: 1440px) {
+  main .row .description-container .description-arrows button.btn {
+    width: 5vw;
+    height: 5vw;
+  }
+  main .row .description-container .description-arrows button.btn:hover {
+    background-color: hsl(0, 0%, 27%);
+    transition: all 0.15s ease-out;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    -ms-transition: all 0.15s ease-out;
+    -o-transition: all 0.15s ease-out;
+  }
+}
+
+section .row {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1440px) {
+  section .row {
+    flex-direction: row;
+  }
+}
+section .row .about-img-dark, section .row .about-img-light {
+  display: flex;
+  min-width: 100vw;
+}
+@media only screen and (min-width: 1440px) {
+  section .row .about-img-dark, section .row .about-img-light {
+    min-width: 30vw;
+    width: 30vw;
+  }
+}
+section .row .about-img-dark img, section .row .about-img-light img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+section .row .about-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
+}
+@media only screen and (min-width: 1440px) {
+  section .row .about-description {
+    padding: 4rem;
+  }
+}
+section .row .about-description h2 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  font-size: 1.25rem;
+}
+section .row .about-description p {
+  color: hsl(0, 0%, 63%);
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(64, 63, 65);
+  padding: 9px 0 5px 0;
+}
+footer .attribution {
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: lightgrey;
+}
+footer .attribution a {
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+footer .attribution .barchu {
+  color: lightpink;
+  padding: 0.1rem 0.25rem;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */
