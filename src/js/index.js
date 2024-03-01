@@ -36,7 +36,7 @@ const slider = () =>{
     const rightArrow = document.querySelector(".btn-right");
     const imgContainer = document.querySelector(".img-slide");
     const title = document.querySelector("#title");
-    const description = document.querySelector("#description");
+    const description = document.querySelector(".description");
     let currentSlide = 0;
     let windowSize = window.screen.width;
 
